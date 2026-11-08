@@ -1,0 +1,19 @@
+/* Schriften liegen neben der Seite (scripts/web.sh kopiert sie aus App/Resources/Fonts), nichts kommt von fremden Servern. */
+@font-face { font-family: "Sofia Sans Extra Condensed"; src: url("fonts/SofiaSansExtraCondensed.ttf"); font-weight: 100 900; }
+@font-face { font-family: "Sofia Sans"; src: url("fonts/SofiaSans.ttf"); font-weight: 100 900; }
+/* Farben wie in der App: oben das Meer, nach unten die Tiefsee. */
+:root { --sea: #0F427D; --sea2: #0A2E62; --deep: #051634; --abyss: #02050B; --text: #EFF6FF; --muted: #BFD3F2; --glow: #74F2FF; --line: rgba(191, 211, 242, 0.28); }
+* { box-sizing: border-box; }
+html { background: var(--abyss); }
+body { margin: 0; min-height: 100vh; color: var(--text); font: 18px/1.6 "Sofia Sans", system-ui, sans-serif;
+  background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(116, 242, 255, 0.16) 0%, transparent 70%),
+    linear-gradient(var(--sea) 0%, var(--sea2) 30%, var(--deep) 70%, var(--abyss) 100%); }
+main { max-width: 680px; margin: 0 auto; padding: 56px 16px 80px; }
+h1, h2 { font-family: "Sofia Sans Extra Condensed", system-ui, sans-serif; font-weight: 800; line-height: 1; color: var(--text); }
+h1 { font-size: 72px; font-weight: 900; margin: 0 0 12px; text-shadow: 0 0 32px rgba(116, 242, 255, 0.35); }
+h2 { font-size: 30px; margin: 40px 0 8px; }
+p { color: var(--muted); }
+strong { color: var(--text); }
+a { color: var(--glow); }
+.card { background: rgba(255, 255, 255, 0.06); border: 1px solid var(--line); border-radius: 20px; padding: 4px 20px; }
+.foot { margin-top: 48px; font-size: 16px; }
